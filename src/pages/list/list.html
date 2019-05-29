@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="light" >
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -12,18 +12,24 @@
 
 
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="presentActionSheet()">
-        <!-- (click)="itemTapped($event, item) -->
+    <!-- <button ion-item *ngFor="let item of items" (click)="presentActionSheet()">
       <ion-icon [name]="item.icon" item-start></ion-icon>
       {{item.title}}
       <div class="item-note" item-end>
         {{item.note}}
       </div>
-    </button>
+    </button> -->
+    <button ion-item *ngFor="let boat of boatList" (click)="itemSelected(boat)" (click)="presentActionSheet()">
+        <ion-icon name='boat' item-start></ion-icon>
+        {{boat.Name}}
+        <div class="item-note" item-end>
+          
+        </div>
+      </button>
+
   </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+
+  
 
   
 

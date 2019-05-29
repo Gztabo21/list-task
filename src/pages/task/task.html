@@ -1,0 +1,32 @@
+<!--
+  Generated template for the TaskPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="light" >
+    <ion-title>task</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list no-lines>
+      <button ion-item *ngFor="let item of tasks" (click)="itemSelected(item)" (click)="presentActionSheet()" >
+          <ion-icon name="list-box" item-start  ></ion-icon>
+        {{ item.Name }}
+        <ion-badge item-end>pendiente</ion-badge>
+      </button>
+    </ion-list>
+  </ion-content>
+
+  <ion-footer>
+    
+
+        
+      
+      <ion-toolbar>
+          
+          <button ion-button round outline color="dark" icon-end (click)="addTask()" ><ion-icon name="add"></ion-icon></button>
+        </ion-toolbar>
+</ion-footer>

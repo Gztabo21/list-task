@@ -5,8 +5,8 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
-    <ion-title>add-boat</ion-title>
+  <ion-navbar color="light" >
+    <ion-title>Boat</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -14,19 +14,19 @@
     <ion-list>
     <ion-item>
       <ion-label color="primary" floating>Name Boat</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="boat.Name" ></ion-input>
     </ion-item>
     <ion-item>
         <ion-label color="primary" floating>Sucursal</ion-label>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)]="boat.Sucursal" ></ion-input>
       </ion-item>
       <ion-item>
           <ion-label>Status</ion-label>
-          <ion-select [(ngModel)]="status">
+          <ion-select [(ngModel)]="boat.Status">
             <ion-option value="Operativo">Operativo</ion-option>
             <ion-option value="No Operativo">No Operativo</ion-option>
           </ion-select>
         </ion-item>
   </ion-list>
-  <button ion-button round outline end >Save</button>
+  <button ion-button round outline end (click)='addBoat()' >Save</button>
 </ion-content>

@@ -5,6 +5,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { InitialPage } from '../pages/initial/initial';
+
+
+import { ProviderListPage } from '../pages/provider-list/provider-list';
+import { TaskListPage } from '../pages/task-list/task-list';
+import { UserListPage } from '../pages/user-list/user-list';
+
+import { AuthService } from '../services/auth.service';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,17 +20,20 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = ListPage;
+  rootPage: any = InitialPage;
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform,private auth: AuthService, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'List', component: ListPage },
+      { title: 'Provider', component: ProviderListPage },
+      { title: 'Task', component: TaskListPage },
+      { title: 'User', component: UserListPage }
     ];
 
   }
@@ -40,5 +51,8 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+  signOut(){
+    this.auth.signOut();
   }
 }

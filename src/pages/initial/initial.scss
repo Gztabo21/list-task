@@ -1,0 +1,15 @@
+page-initial {
+    background: blue;
+
+ .span-error-login{
+     color:red;
+     font-size: 15px;
+ }
+ my-component {
+    background: color($colors, twitter, base);
+  }
+
+}
+ion-content{
+    --ion-background-color:#111D12;
+}
