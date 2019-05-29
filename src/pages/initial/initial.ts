@@ -4,6 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { AuthService } from '../../services/auth.service';
 
+import { HomePage } from '../home/home';
 import { ListPage }from'../list/list';
 import { SignupPage } from '../signup/signup';
 /**
@@ -56,7 +57,7 @@ loginForm: FormGroup;
 		};
 		this.auth.signInWithEmail(credentials)
 			.then(
-				() => this.navCtrl.setRoot(ListPage),
+				() => this.navCtrl.setRoot(HomePage),
 				error => this.loginError = error.message
 			);
   }

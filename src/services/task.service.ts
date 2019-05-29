@@ -27,10 +27,7 @@ export class TaskService {
     }
  
     addTask(task: Task) {
-        // return this.boatListRef.push(task);
         let key = this.db.list('task/').push(task).key;
-        //Guardamos la fruta y obetenemos el id que firebase pone al nudulo de nuestra fruta.
-        //Al guardarse sin id nuestra fruta, ahora la actualizamos con el id que firebase nos devuelve.
         task.key = key;
         this.db.database.ref('task/'+task.key).set(task);
     }

@@ -38,6 +38,8 @@ task: Task = {
   Name:null,
   observation:null,
   Status:null,
+  DateCulminated:null,
+  CreationDate:null,
   provider:null,
   boat:null
 }
@@ -63,15 +65,15 @@ editing :boolean = false;
       this.taskService.getTaskList().subscribe((data:Task[])=>{
         this.tasks = data
         this.task = this.tasks.find( (r)=> { return r.key == this.id} );
-        console.log(this.task)
+        // console.log(this.task)
       },(error)=>{
         console.log(error);
       })
     }
-
+    
 
     this.providerService.getProviderList().subscribe((data:Provider[])=>{
-      console.log(data);
+      // console.log(data);
       this.Providers = data;
     },(error)=>{
       console.log(error);
@@ -79,10 +81,11 @@ editing :boolean = false;
 
 
   }
-
+  hoy = new Date();
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AddTaskPage');
-    console.log(this.myParam)
+    // console.log('ionViewDidLoad AddTaskPage');
+    // console.log(this.myParam)
+    console.log(this.hoy)
   }
   doSubmit(event) {
     console.log('Submitting form', this.langForm.value);
@@ -94,10 +97,13 @@ editing :boolean = false;
   addtask(){
     
     if(this.editing){
+      this.task.DateCulminated = this.hoy
       this.taskService.updateTask(this.task);
       this.msgUpdate();
       this.navCtrl.setRoot(ListPage);
     }else{
+      this.task.CreationDate = this.hoy;
+      this.task.DateCulminated = this.hoy
       this.task.Status = this.Status
       this.task.boat = this.myParam
       this.taskService.addTask(this.task);
@@ -118,7 +124,7 @@ editing :boolean = false;
 msgUpdate() {
 
   const alert = this.alertCtrl.create({
-    title: 'edited correctly',
+    title: 'Edited correctly',
     buttons: ['OK']
   });
   alert.present();

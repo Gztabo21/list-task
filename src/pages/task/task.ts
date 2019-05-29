@@ -54,7 +54,7 @@ export class TaskPage {
   itemSelected(item) {
     
     this.idTask = item.key;
-console.log(this.idTask)
+// console.log(this.idTask)
   }
  addTask(){
   //  this.navCtrl.push(AddTaskPage)
