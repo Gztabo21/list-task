@@ -42,10 +42,9 @@ var TaskService = /** @class */ (function () {
     TaskService.prototype.removeTask = function (id) {
         return this.db.database.ref('task/' + id).remove();
     };
-    var _a;
     TaskService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_fire_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_fire_database__["a" /* AngularFireDatabase */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_fire_database__["a" /* AngularFireDatabase */]])
     ], TaskService);
     return TaskService;
 }());
@@ -110,7 +109,7 @@ var AuthService = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__list_list__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__list_list__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_provider_service__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_task_service__ = __webpack_require__(116);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -225,12 +224,14 @@ var AddTaskPage = /** @class */ (function () {
         });
         alert.present();
     };
-    var _a, _b, _c, _d, _e;
     AddTaskPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-add-task',template:/*ion-inline-start:"/home/developer06/Escritorio/personal/js/list-task/src/pages/add-task/add-task.html"*/'<!--\n  Generated template for the AddTaskPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar color="light" >\n        <button ion-button menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n        <ion-title>Add Task</ion-title>\n        \n      </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n   \n    <ion-list>\n\n        <ion-item>\n          <ion-label floating>Name</ion-label>\n          <ion-input type="text" [(ngModel)]="task.Name" ></ion-input>\n        </ion-item>\n      \n        <ion-item>\n          <ion-label floating>Observation</ion-label>\n          <ion-input type="text" [(ngModel)]="task.observation"></ion-input>\n        </ion-item>\n\n      <ion-item>\n              <ion-label>Culminated</ion-label>\n              <ion-toggle  [(ngModel)]="task.Status" (ionChange)=\'value($event)\' ></ion-toggle>\n            </ion-item>\n\n            <ion-item *ngIf="task.Status" >\n                <ion-label>Provider</ion-label>\n                <ion-select  [(ngModel)]="task.provider" >\n                  <ion-option *ngFor="let provider of Providers"   >{{provider.Name}}</ion-option>\n                </ion-select>\n              </ion-item>\n\n      </ion-list>\n\n\n          \n\n       \n\n      <div padding>\n          <button ion-button color="primary" block (click)="addtask()" >Add</button>\n        </div>\n\n</ion-content>\n'/*ion-inline-end:"/home/developer06/Escritorio/personal/js/list-task/src/pages/add-task/add-task.html"*/,
+            selector: 'page-add-task',template:/*ion-inline-start:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/add-task/add-task.html"*/'<!--\n  Generated template for the AddTaskPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar color="light" >\n        <button ion-button menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n        <ion-title>Add Task</ion-title>\n        \n      </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n   \n    <ion-list>\n\n        <ion-item>\n          <ion-label floating>Name</ion-label>\n          <ion-input type="text" [(ngModel)]="task.Name" ></ion-input>\n        </ion-item>\n      \n        <ion-item>\n          <ion-label floating>Observation</ion-label>\n          <ion-input type="text" [(ngModel)]="task.observation"></ion-input>\n        </ion-item>\n\n      <ion-item>\n              <ion-label>Culminated</ion-label>\n              <ion-toggle  [(ngModel)]="task.Status" (ionChange)=\'value($event)\' ></ion-toggle>\n            </ion-item>\n\n            <ion-item *ngIf="task.Status" >\n                <ion-label>Provider</ion-label>\n                <ion-select  [(ngModel)]="task.provider" >\n                  <ion-option *ngFor="let provider of Providers"   >{{provider.Name}}</ion-option>\n                </ion-select>\n              </ion-item>\n\n      </ion-list>\n\n\n          \n\n       \n\n      <div padding>\n          <button ion-button color="primary" block (click)="addtask()" >Add</button>\n        </div>\n\n</ion-content>\n'/*ion-inline-end:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/add-task/add-task.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_provider_service__["a" /* ProviderService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_provider_service__["a" /* ProviderService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__services_task_service__["a" /* TaskService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_task_service__["a" /* TaskService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === "function" && _e || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_4__services_provider_service__["a" /* ProviderService */],
+            __WEBPACK_IMPORTED_MODULE_5__services_task_service__["a" /* TaskService */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]])
     ], AddTaskPage);
     return AddTaskPage;
 }());
@@ -300,8 +301,8 @@ var BoatService = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_auth_service__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__signup_signup__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(181);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__signup_signup__ = __webpack_require__(208);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -354,12 +355,14 @@ var InitialPage = /** @class */ (function () {
     InitialPage.prototype.signup = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__signup_signup__["a" /* SignupPage */]);
     };
-    var _a, _b, _c, _d;
     InitialPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-initial',template:/*ion-inline-start:"/home/developer06/Escritorio/personal/js/list-task/src/pages/initial/initial.html"*/'<!--\n  Generated template for the InitialPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n\n<ion-content   padding>\n<h1>Welcome</h1>\n<ion-col align-self-center >\n    <ion-icon name="contact" class=\'avatar\' ></ion-icon>\n</ion-col>\n<form (ngSubmit)="login()" [formGroup]="loginForm">\n    <br>\n    <ion-item [ngClass]="{ invalid: emailErrors.hasError(\'*\', [\'touched\', \'dirty\']) }" >\n        <ion-label  stacked>Email:</ion-label>\n        <ion-input type="email" formControlName="email"   placeholder="Email Input"></ion-input>\n      </ion-item>\n\n      <div ngxErrors="email" #emailErrors="ngxErrors">\n				<div [ngxError]="[\'email\', \'required\']" [when]="[\'touched\', \'dirty\']">It should be a valid email</div>\n      </div>\n      \n    <br>\n      <ion-item [ngClass]="{ invalid: passwordErrors.hasError(\'*\', [\'touched\']) }" >\n        <ion-label color="primary" stacked>Password:</ion-label>\n        <ion-input type="password" formControlName="password"  placeholder="Password Input"></ion-input>\n      </ion-item>\n\n      <div ngxErrors="password" #passwordErrors="ngxErrors">\n				<div [ngxError]="[\'minlength\', \'required\']" [when]="[\'touched\']">It should be at least 5 characters</div>\n			</div>\n      <!-- <span class="span-error-login">{{message}}</span> -->\n\n      <div padding-horizontal>\n        <div class="form-error">{{loginError}}</div>\n  \n        <button ion-button full type="submit" [disabled]="!loginForm.valid">Log in</button>\n        <div class="login-footer">\n          <p>\n            <a href="#">Forgot password?</a>\n            If you\'re a new user, please sign up.\n          </p>\n        </div>\n  \n        <ion-list>\n  \n          <!-- <button ion-button icon-left block clear (click)="loginWithGoogle()">\n            <ion-icon name="logo-google"></ion-icon>\n            Log in with Google\n          </button> -->\n  \n          <button ion-button icon-left block clear (click)="signup()">\n            <ion-icon name="person-add"></ion-icon>\n            Sign up\n          </button>\n        </ion-list>\n      </div>\n\n   \n      <!-- <button ion-button block  color="primary" (click)="login()">Iniciar</button> -->\n    </form>\n</ion-content>\n'/*ion-inline-end:"/home/developer06/Escritorio/personal/js/list-task/src/pages/initial/initial.html"*/,
+            selector: 'page-initial',template:/*ion-inline-start:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/initial/initial.html"*/'<!--\n  Generated template for the InitialPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n\n<ion-content  class="getstart" padding>\n<h1>Welcome</h1>\n<ion-row> \n  <ion-col col-3 ></ion-col>\n  <ion-col col-6 ><img src="../../assets/imgs/logo.png" alt="logo de la empresa"></ion-col>\n  <ion-col col-3></ion-col>\n</ion-row>\n<form (ngSubmit)="login()" [formGroup]="loginForm">\n    <br>\n    <ion-item  [ngClass]="{ invalid: emailErrors.hasError(\'*\', [\'touched\', \'dirty\']) }" >\n        <ion-label color="primary" stacked>Email:</ion-label>\n        <ion-input type="email" formControlName="email"   placeholder="Email Input"></ion-input>\n      </ion-item>\n\n      <div ngxErrors="email" #emailErrors="ngxErrors">\n				<div [ngxError]="[\'email\', \'required\']" [when]="[\'touched\', \'dirty\']">It should be a valid email</div>\n      </div>\n      \n    <br>\n      <ion-item  [ngClass]="{ invalid: passwordErrors.hasError(\'*\', [\'touched\']) }" >\n        <ion-label color="primary" stacked>Password:</ion-label>\n        <ion-input type="password" formControlName="password"  placeholder="Password Input"></ion-input>\n      </ion-item>\n\n      <div ngxErrors="password" #passwordErrors="ngxErrors">\n				<div [ngxError]="[\'minlength\', \'required\']" [when]="[\'touched\']">It should be at least 5 characters</div>\n			</div>\n      <!-- <span class="span-error-login">{{message}}</span> -->\n\n      <div padding-horizontal>\n        <div class="form-error">{{loginError}}</div>\n  \n        <button ion-button full type="submit" [disabled]="!loginForm.valid">Log in</button>\n        <!-- <div class="login-footer">\n          <p>\n            <a href="#">Forgot password?</a>\n            If you\'re a new user, please sign up.\n          </p>\n        </div> -->\n  \n        <ion-list>\n  \n          <!-- <button ion-button icon-left block clear (click)="loginWithGoogle()">\n            <ion-icon name="logo-google"></ion-icon>\n            Log in with Google\n          </button> -->\n  \n          <!-- <button ion-button icon-left block clear (click)="signup()">\n            <ion-icon name="person-add"></ion-icon>\n            Sign up\n          </button> -->\n        </ion-list>\n      </div>\n\n   \n      <!-- <button ion-button block  color="primary" (click)="login()">Iniciar</button> -->\n    </form>\n</ion-content>\n'/*ion-inline-end:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/initial/initial.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]])
     ], InitialPage);
     return InitialPage;
 }());
@@ -368,7 +371,42 @@ var InitialPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 205:
+/***/ 181:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var HomePage = /** @class */ (function () {
+    function HomePage(navCtrl) {
+        this.navCtrl = navCtrl;
+    }
+    HomePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-home',template:/*ion-inline-start:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar color="light" >\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <h3>Welcome my app-mobile</h3> \n<ion-grid>\n  <ion-row> \n    <ion-col col-3 ></ion-col>\n    <ion-col col-6 ><img src="../../assets/imgs/logo.png" alt="logo de la empresa"></ion-col>\n    <ion-col col-3></ion-col>\n  </ion-row>\n  <ion-row>\n    <ion-col col-12>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel mi ut\n    velit tempor aliquam eget eget enim. Proin cursus eleifend pretium. Aliquam cursus \n    pellentesque interdum. Vivamus placerat id leo a pellentesque. Vivamus a congue urna,\n    sed porta eros. Etiam finibus magna et est aliquam, sed semper libero facilisis. \n    Donec lectus lorem, rhoncus vitae quam eget, vulputate gravida elit. Praesent ultricies\n    eros id velit condimentum, eu ultrices nisl consequat."</ion-col>\n  </ion-row>\n  <ion-row>\n    <ion-col col-6>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel mi ut\n    velit tempor aliquam eget eget enim. Proin cursus eleifend pretium. Aliquam cursus \n    pellentesque interdum. Vivamus placerat id leo a pellentesque. Vivamus a congue urna,\n    sed porta eros. Etiam finibus magna et est aliquam, sed semper libero facilisis. \n    Donec lectus lorem, rhoncus vitae quam eget, vulputate gravida elit. Praesent ultricies\n    eros id velit condimentum, eu ultrices nisl consequat.</ion-col>\n    <ion-col col-6 > "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel mi ut\n    velit tempor aliquam eget eget enim. Proin cursus eleifend pretium. Aliquam cursus \n    pellentesque interdum. Vivamus placerat id leo a pellentesque. Vivamus a congue urna,\n    sed porta eros. Etiam finibus magna et est aliquam, sed semper libero facilisis. \n    Donec lectus lorem, rhoncus vitae quam eget, vulputate gravida elit. Praesent ultricies\n    eros id velit condimentum, eu ultrices nisl consequat."</ion-col>\n  </ion-row>\n</ion-grid>\n    \n\n\n  \n</ion-content>\n'/*ion-inline-end:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/home/home.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]])
+    ], HomePage);
+    return HomePage;
+}());
+
+//# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 206:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -376,7 +414,7 @@ var InitialPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_boat_service__ = __webpack_require__(123);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_list_list__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_list_list__ = __webpack_require__(61);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -464,7 +502,7 @@ var AddBoatPage = /** @class */ (function () {
     };
     AddBoatPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-add-boat',template:/*ion-inline-start:"/home/developer06/Escritorio/personal/js/list-task/src/pages/add-boat/add-boat.html"*/'<!--\n  Generated template for the AddBoatPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="light" >\n    <ion-title>Boat</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-list>\n    <ion-item>\n      <ion-label color="primary" floating>Name Boat</ion-label>\n      <ion-input [(ngModel)]="boat.Name" ></ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-label color="primary" floating>Sucursal</ion-label>\n        <ion-input [(ngModel)]="boat.Sucursal" ></ion-input>\n      </ion-item>\n      <ion-item>\n          <ion-label>Status</ion-label>\n          <ion-select [(ngModel)]="boat.Status">\n            <ion-option value="Operativo">Operativo</ion-option>\n            <ion-option value="No Operativo">No Operativo</ion-option>\n          </ion-select>\n        </ion-item>\n  </ion-list>\n  <button ion-button round outline end (click)=\'addBoat()\' >Save</button>\n</ion-content>\n'/*ion-inline-end:"/home/developer06/Escritorio/personal/js/list-task/src/pages/add-boat/add-boat.html"*/,
+            selector: 'page-add-boat',template:/*ion-inline-start:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/add-boat/add-boat.html"*/'<!--\n  Generated template for the AddBoatPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="light" >\n    <ion-title>Boat</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-list>\n    <ion-item>\n      <ion-label color="primary" floating>Name Boat</ion-label>\n      <ion-input [(ngModel)]="boat.Name" ></ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-label color="primary" floating>Sucursal</ion-label>\n        <ion-input [(ngModel)]="boat.Sucursal" ></ion-input>\n      </ion-item>\n      <ion-item>\n          <ion-label>Status</ion-label>\n          <ion-select [(ngModel)]="boat.Status">\n            <ion-option value="Operativo">Operativo</ion-option>\n            <ion-option value="No Operativo">No Operativo</ion-option>\n          </ion-select>\n        </ion-item>\n  </ion-list>\n  <button ion-button round outline end (click)=\'addBoat()\' >Save</button>\n</ion-content>\n'/*ion-inline-end:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/add-boat/add-boat.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
@@ -478,7 +516,7 @@ var AddBoatPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 206:
+/***/ 207:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -607,12 +645,16 @@ var TaskPage = /** @class */ (function () {
         });
         actionSheet.present();
     };
-    var _a, _b, _c, _d, _e, _f;
     TaskPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-task',template:/*ion-inline-start:"/home/developer06/Escritorio/personal/js/list-task/src/pages/task/task.html"*/'<!--\n  Generated template for the TaskPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="light" >\n    <ion-title>task</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <ion-list no-lines>\n      <button ion-item *ngFor="let item of tasks" (click)="itemSelected(item)" (click)="presentActionSheet()" >\n          <ion-icon name="list-box" item-start  ></ion-icon>\n        {{ item.Name }}\n        <ion-badge item-end>pendiente</ion-badge>\n      </button>\n    </ion-list>\n  </ion-content>\n\n  <ion-footer>\n    \n\n        \n      \n      <ion-toolbar>\n          \n          <button ion-button round outline color="dark" icon-end (click)="addTask()" ><ion-icon name="add"></ion-icon></button>\n        </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/home/developer06/Escritorio/personal/js/list-task/src/pages/task/task.html"*/,
+            selector: 'page-task',template:/*ion-inline-start:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/task/task.html"*/'<!--\n  Generated template for the TaskPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="light" >\n    <ion-title>task</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <ion-list no-lines>\n      <button ion-item *ngFor="let item of tasks" (click)="itemSelected(item)" (click)="presentActionSheet()" >\n          <ion-icon name="list-box" item-start  ></ion-icon>\n        {{ item.Name }}\n        <ion-badge item-end>pendiente</ion-badge>\n      </button>\n    </ion-list>\n  </ion-content>\n\n  <ion-footer>\n    \n\n        \n      \n      <ion-toolbar>\n          \n          <button ion-button round outline color="dark" icon-end (click)="addTask()" ><ion-icon name="add"></ion-icon></button>\n        </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/task/task.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3__services_task_service__["a" /* TaskService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_task_service__["a" /* TaskService */]) === "function" && _f || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__services_task_service__["a" /* TaskService */]])
     ], TaskPage);
     return TaskPage;
 }());
@@ -621,7 +663,7 @@ var TaskPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 207:
+/***/ 208:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -676,7 +718,7 @@ var SignupPage = /** @class */ (function () {
     };
     SignupPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-signup',template:/*ion-inline-start:"/home/developer06/Escritorio/personal/js/list-task/src/pages/signup/signup.html"*/'<!--\n  Generated template for the SignupPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>signup</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <form (ngSubmit)="signup()" [formGroup]="form">\n		<ion-list inset>\n\n			<ion-item [ngClass]="{ invalid: emailErrors.hasError(\'*\', [\'touched\']) }">\n				<ion-input type="text" placeholder="Email" formControlName="email"></ion-input>\n			</ion-item>\n\n			<div ngxErrors="email" #emailErrors="ngxErrors">\n				<div [ngxError]="[\'email\', \'required\']" [when]="[\'touched\']">It should be a valid email</div>\n			</div>\n\n			<ion-item [ngClass]="{ invalid: passwordErrors.hasError(\'*\', [\'touched\']) }">\n				<ion-input type="password" placeholder="Password" formControlName="password"></ion-input>\n      </ion-item>\n      \n      <ion-item >\n				<ion-input type="text" placeholder="type User" formControlName="typeUser" ></ion-input>\n			</ion-item>\n\n			<div ngxErrors="password" #passwordErrors="ngxErrors">\n				<div [ngxError]="[\'minlength\', \'required\']" [when]="[\'touched\']">It should be at least 6 characters</div>\n			</div>\n		</ion-list>\n\n		<div padding-horizontal>\n			<div class="form-error">{{signupError}}</div>\n\n			<button ion-button full type="submit" [disabled]="!form.valid">Sign up</button>\n		</div>\n	</form>\n</ion-content>\n'/*ion-inline-end:"/home/developer06/Escritorio/personal/js/list-task/src/pages/signup/signup.html"*/,
+            selector: 'page-signup',template:/*ion-inline-start:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/signup/signup.html"*/'<!--\n  Generated template for the SignupPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>signup</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <form (ngSubmit)="signup()" [formGroup]="form">\n		<ion-list inset>\n\n			<ion-item [ngClass]="{ invalid: emailErrors.hasError(\'*\', [\'touched\']) }">\n				<ion-input type="text" placeholder="Email" formControlName="email"></ion-input>\n			</ion-item>\n\n			<div ngxErrors="email" #emailErrors="ngxErrors">\n				<div [ngxError]="[\'email\', \'required\']" [when]="[\'touched\']">It should be a valid email</div>\n			</div>\n\n			<ion-item [ngClass]="{ invalid: passwordErrors.hasError(\'*\', [\'touched\']) }">\n				<ion-input type="password" placeholder="Password" formControlName="password"></ion-input>\n      </ion-item>\n      \n      <ion-item >\n				<ion-input type="text" placeholder="type User" formControlName="typeUser" ></ion-input>\n			</ion-item>\n\n			<div ngxErrors="password" #passwordErrors="ngxErrors">\n				<div [ngxError]="[\'minlength\', \'required\']" [when]="[\'touched\']">It should be at least 6 characters</div>\n			</div>\n		</ion-list>\n\n		<div padding-horizontal>\n			<div class="form-error">{{signupError}}</div>\n\n			<button ion-button full type="submit" [disabled]="!form.valid">Sign up</button>\n		</div>\n	</form>\n</ion-content>\n'/*ion-inline-end:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/signup/signup.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */],
@@ -689,14 +731,14 @@ var SignupPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 208:
+/***/ 209:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProviderListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__provider_provider__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__provider_provider__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_provider_service__ = __webpack_require__(84);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -814,7 +856,7 @@ var ProviderListPage = /** @class */ (function () {
     };
     ProviderListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-provider-list',template:/*ion-inline-start:"/home/developer06/Escritorio/personal/js/list-task/src/pages/provider-list/provider-list.html"*/'<!--\n  Generated template for the ProviderListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="light" >\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Provider</ion-title>\n    \n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n\n\n  <ion-list>\n    <!-- <button ion-item *ngFor="let item of items" (click)="presentActionSheet()">\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-end>\n        {{item.note}}\n      </div>\n    </button> -->\n    <button ion-item *ngFor="let item of provider" (click)="itemSelected(item)" (click)="presentActionSheet()">\n        <ion-icon name=\'boat\' item-start></ion-icon>\n        {{item.Name}}\n        <div class="item-note" item-end>\n          \n        </div>\n      </button>\n\n  </ion-list>\n\n  \n\n  \n\n</ion-content>\n<ion-footer>\n    \n        \n      \n  <ion-toolbar>\n      \n      <button ion-button round outline color="dark" icon-end (click)="addPage()" ><ion-icon name="add"></ion-icon></button>\n    </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/home/developer06/Escritorio/personal/js/list-task/src/pages/provider-list/provider-list.html"*/,
+            selector: 'page-provider-list',template:/*ion-inline-start:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/provider-list/provider-list.html"*/'<!--\n  Generated template for the ProviderListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="light" >\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Provider</ion-title>\n    \n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n\n\n  <ion-list>\n    <!-- <button ion-item *ngFor="let item of items" (click)="presentActionSheet()">\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-end>\n        {{item.note}}\n      </div>\n    </button> -->\n    <button ion-item *ngFor="let item of provider" (click)="itemSelected(item)" (click)="presentActionSheet()">\n        <ion-icon name=\'boat\' item-start></ion-icon>\n        {{item.Name}}\n        <div class="item-note" item-end>\n          \n        </div>\n      </button>\n\n  </ion-list>\n\n  \n\n  \n\n</ion-content>\n<ion-footer>\n    \n        \n      \n  <ion-toolbar>\n      \n      <button ion-button round outline color="dark" icon-end (click)="addPage()" ><ion-icon name="add"></ion-icon></button>\n    </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/provider-list/provider-list.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */],
@@ -830,7 +872,7 @@ var ProviderListPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 209:
+/***/ 210:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -838,7 +880,7 @@ var ProviderListPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_provider_service__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__list_list__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__list_list__ = __webpack_require__(61);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -921,7 +963,7 @@ var ProviderPage = /** @class */ (function () {
     };
     ProviderPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-provider',template:/*ion-inline-start:"/home/developer06/Escritorio/personal/js/list-task/src/pages/provider/provider.html"*/'<!--\n  Generated template for the ProviderPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar color="light" >\n      <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title>Provider</ion-title>\n      \n    </ion-navbar>\n  </ion-header>\n\n<ion-content padding>\n    <ion-list>\n\n        <ion-item>\n          <ion-label>Name :</ion-label>\n          <ion-input type="text" [(ngModel)]="provider.Name" ></ion-input>\n        </ion-item>\n\n          <ion-item>\n              <ion-label>Rif :</ion-label>\n              <ion-input type="text"[(ngModel)]="provider.Rif"></ion-input>\n            </ion-item>\n            \n                <ion-item>\n                    <ion-label>Address :</ion-label>\n                    <ion-input type="text" [(ngModel)]="provider.Direccion" ></ion-input>\n                  </ion-item>\n\n                  <ion-item>\n                <ion-label>Phone :</ion-label>\n                <ion-input type="text"[(ngModel)]="provider.Telefono"></ion-input>\n              </ion-item>\n              <ion-item>\n                  <ion-label>represtant:</ion-label>\n                  <ion-input type="text" [(ngModel)]="provider.Representante" ></ion-input>\n                </ion-item>\n          \n\n      \n      </ion-list>\n      \n      <div padding>\n          <button ion-button color="primary" block (click)="AddProvider()" >Accept</button>\n        </div>\n\n</ion-content>\n'/*ion-inline-end:"/home/developer06/Escritorio/personal/js/list-task/src/pages/provider/provider.html"*/,
+            selector: 'page-provider',template:/*ion-inline-start:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/provider/provider.html"*/'<!--\n  Generated template for the ProviderPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar color="light" >\n      <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title>Provider</ion-title>\n      \n    </ion-navbar>\n  </ion-header>\n\n<ion-content padding>\n    <ion-list>\n\n        <ion-item>\n          <ion-label>Name :</ion-label>\n          <ion-input type="text" [(ngModel)]="provider.Name" ></ion-input>\n        </ion-item>\n\n          <ion-item>\n              <ion-label>Rif :</ion-label>\n              <ion-input type="text"[(ngModel)]="provider.Rif"></ion-input>\n            </ion-item>\n            \n                <ion-item>\n                    <ion-label>Address :</ion-label>\n                    <ion-input type="text" [(ngModel)]="provider.Direccion" ></ion-input>\n                  </ion-item>\n\n                  <ion-item>\n                <ion-label>Phone :</ion-label>\n                <ion-input type="text"[(ngModel)]="provider.Telefono"></ion-input>\n              </ion-item>\n              <ion-item>\n                  <ion-label>represtant:</ion-label>\n                  <ion-input type="text" [(ngModel)]="provider.Representante" ></ion-input>\n                </ion-item>\n          \n\n      \n      </ion-list>\n      \n      <div padding>\n          <button ion-button color="primary" block (click)="AddProvider()" >Accept</button>\n        </div>\n\n</ion-content>\n'/*ion-inline-end:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/provider/provider.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2__services_provider_service__["a" /* ProviderService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]])
@@ -933,7 +975,7 @@ var ProviderPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 210:
+/***/ 211:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -941,7 +983,7 @@ var ProviderPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_provider_service__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__user_user__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__user_user__ = __webpack_require__(212);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1057,7 +1099,7 @@ var UserListPage = /** @class */ (function () {
     };
     UserListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-user-list',template:/*ion-inline-start:"/home/developer06/Escritorio/personal/js/list-task/src/pages/user-list/user-list.html"*/'<!--\n  Generated template for the UserListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="light" >\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>User</ion-title>\n    \n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n\n  \n  <ion-list>\n    <!-- <button ion-item *ngFor="let item of items" (click)="presentActionSheet()">\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-end>\n        {{item.note}}\n      </div>\n    </button> -->\n    <button ion-item *ngFor="let item of provider" (click)="itemSelected(item)" (click)="presentActionSheet()">\n        <ion-icon name=\'boat\' item-start></ion-icon>\n        {{item.Name}}\n        <div class="item-note" item-end>\n          \n        </div>\n      </button>\n\n  </ion-list>\n\n  \n\n  \n\n</ion-content>\n<ion-footer>\n    \n        \n      \n  <ion-toolbar>\n      \n      <button ion-button round outline color="dark" icon-end (click)="addPage()" ><ion-icon name="add"></ion-icon></button>\n    </ion-toolbar>\n</ion-footer>'/*ion-inline-end:"/home/developer06/Escritorio/personal/js/list-task/src/pages/user-list/user-list.html"*/,
+            selector: 'page-user-list',template:/*ion-inline-start:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/user-list/user-list.html"*/'<!--\n  Generated template for the UserListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="light" >\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>User</ion-title>\n    \n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n\n  \n  <ion-list>\n    <!-- <button ion-item *ngFor="let item of items" (click)="presentActionSheet()">\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-end>\n        {{item.note}}\n      </div>\n    </button> -->\n    <button ion-item *ngFor="let item of provider" (click)="itemSelected(item)" (click)="presentActionSheet()">\n        <ion-icon name=\'boat\' item-start></ion-icon>\n        {{item.Name}}\n        <div class="item-note" item-end>\n          \n        </div>\n      </button>\n\n  </ion-list>\n\n  \n\n  \n\n</ion-content>\n<ion-footer>\n    \n        \n      \n  <ion-toolbar>\n      \n      <button ion-button round outline color="dark" icon-end (click)="addPage()" ><ion-icon name="add"></ion-icon></button>\n    </ion-toolbar>\n</ion-footer>'/*ion-inline-end:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/user-list/user-list.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */],
@@ -1073,7 +1115,7 @@ var UserListPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 211:
+/***/ 212:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1107,7 +1149,7 @@ var UserPage = /** @class */ (function () {
     };
     UserPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-user',template:/*ion-inline-start:"/home/developer06/Escritorio/personal/js/list-task/src/pages/user/user.html"*/'<!--\n  Generated template for the UserPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar color="light" >\n      <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title>User</ion-title>\n      \n    </ion-navbar>\n  </ion-header>\n\n<ion-content padding>\n    <ion-list>\n\n        <ion-item>\n          <ion-label>Name</ion-label>\n          <ion-input type="text" value=""></ion-input>\n        </ion-item>\n\n        <ion-item>\n            <ion-label>Lastname</ion-label>\n            <ion-input type="text" value=""></ion-input>\n          </ion-item>\n\n          <ion-item>\n              <ion-label>Email</ion-label>\n              <ion-input type="text" value=""></ion-input>\n            </ion-item>\n    \n        <ion-item>\n          <ion-label>Password</ion-label>\n          <ion-input type="password" value=""></ion-input>\n        </ion-item>\n    \n        <ion-item>\n            <ion-label>Repeat-Password</ion-label>\n            <ion-input type="text" value=""></ion-input>\n          </ion-item>\n\n      </ion-list>\n    \n      <div padding>\n        <button ion-button color="primary" block> Save</button>\n      </div>\n\n</ion-content>\n'/*ion-inline-end:"/home/developer06/Escritorio/personal/js/list-task/src/pages/user/user.html"*/,
+            selector: 'page-user',template:/*ion-inline-start:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/user/user.html"*/'<!--\n  Generated template for the UserPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar color="light" >\n      <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title>User</ion-title>\n      \n    </ion-navbar>\n  </ion-header>\n\n<ion-content padding>\n    <ion-list>\n\n        <ion-item>\n          <ion-label>Name</ion-label>\n          <ion-input type="text" value=""></ion-input>\n        </ion-item>\n\n        <ion-item>\n            <ion-label>Lastname</ion-label>\n            <ion-input type="text" value=""></ion-input>\n          </ion-item>\n\n          <ion-item>\n              <ion-label>Email</ion-label>\n              <ion-input type="text" value=""></ion-input>\n            </ion-item>\n    \n        <ion-item>\n          <ion-label>Password</ion-label>\n          <ion-input type="password" value=""></ion-input>\n        </ion-item>\n    \n        <ion-item>\n            <ion-label>Repeat-Password</ion-label>\n            <ion-input type="text" value=""></ion-input>\n          </ion-item>\n\n      </ion-list>\n    \n      <div padding>\n        <button ion-button color="primary" block> Save</button>\n      </div>\n\n</ion-content>\n'/*ion-inline-end:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/user/user.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], UserPage);
@@ -1118,7 +1160,7 @@ var UserPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 212:
+/***/ 213:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1334,7 +1376,7 @@ var TaskListPage = /** @class */ (function () {
     };
     TaskListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-task-list',template:/*ion-inline-start:"/home/developer06/Escritorio/personal/js/list-task/src/pages/task-list/task-list.html"*/'<!--\n  Generated template for the TaskListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="light" >\n      <button ion-button menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n    <ion-title>task</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n\n<ion-content>\n    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n    <ion-list no-lines>\n      <button ion-item *ngFor="let item of tasks" (click)="itemSelected(item)" (click)="presentActionSheet()" >\n          <ion-icon name="list-box" item-start  ></ion-icon>\n        {{ item.Name }}\n        <ng-container *ngIf="item.Status; else elseTemplate">\n          <ion-badge item-end color="secondary" >Culminated</ion-badge>\n        </ng-container>\n        <ng-template #elseTemplate>\n          <ion-badge item-end >pending</ion-badge>\n        </ng-template>\n        \n\n \n        \n      </button>\n    </ion-list>\n  </ion-content>\n\n  <ion-footer>\n    \n\n        \n      \n      <ion-toolbar>\n          \n          \n          <button ion-button (click)="makePdf()" color="dark"><ion-icon name="list-box"></ion-icon></button>\n        </ion-toolbar>\n</ion-footer>'/*ion-inline-end:"/home/developer06/Escritorio/personal/js/list-task/src/pages/task-list/task-list.html"*/,
+            selector: 'page-task-list',template:/*ion-inline-start:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/task-list/task-list.html"*/'<!--\n  Generated template for the TaskListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="light" >\n      <button ion-button menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n    <ion-title>task</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n\n<ion-content>\n    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n    <ion-list no-lines>\n      <button ion-item *ngFor="let item of tasks" (click)="itemSelected(item)" (click)="presentActionSheet()" >\n          <ion-icon name="list-box" item-start  ></ion-icon>\n        {{ item.Name }}\n        <ng-container *ngIf="item.Status; else elseTemplate">\n          <ion-badge item-end color="secondary" >Culminated</ion-badge>\n        </ng-container>\n        <ng-template #elseTemplate>\n          <ion-badge item-end >pending</ion-badge>\n        </ng-template>\n        \n\n \n        \n      </button>\n    </ion-list>\n  </ion-content>\n\n  <ion-footer>\n    \n\n        \n      \n      <ion-toolbar>\n          \n          \n          <button ion-button (click)="makePdf()" ><ion-icon name="list-box"></ion-icon></button>\n        </ion-toolbar>\n</ion-footer>'/*ion-inline-end:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/task-list/task-list.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */],
@@ -1350,7 +1392,7 @@ var TaskListPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 242:
+/***/ 243:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -1363,20 +1405,20 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 242;
+webpackEmptyAsyncContext.id = 243;
 
 /***/ }),
 
-/***/ 284:
+/***/ 285:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/add-boat/add-boat.module": [
-		638,
+		636,
 		9
 	],
 	"../pages/add-task/add-task.module": [
-		636,
+		644,
 		8
 	],
 	"../pages/initial/initial.module": [
@@ -1384,15 +1426,15 @@ var map = {
 		7
 	],
 	"../pages/provider-list/provider-list.module": [
-		639,
+		638,
 		6
 	],
 	"../pages/provider/provider.module": [
-		640,
+		639,
 		5
 	],
 	"../pages/signup/signup.module": [
-		641,
+		640,
 		4
 	],
 	"../pages/task-list/task-list.module": [
@@ -1400,15 +1442,15 @@ var map = {
 		3
 	],
 	"../pages/task/task.module": [
-		642,
+		641,
 		2
 	],
 	"../pages/user-list/user-list.module": [
-		643,
+		642,
 		1
 	],
 	"../pages/user/user.module": [
-		644,
+		643,
 		0
 	]
 };
@@ -1423,43 +1465,8 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 284;
+webpackAsyncContext.id = 285;
 module.exports = webpackAsyncContext;
-
-/***/ }),
-
-/***/ 353:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var HomePage = /** @class */ (function () {
-    function HomePage(navCtrl) {
-        this.navCtrl = navCtrl;
-    }
-    HomePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/home/developer06/Escritorio/personal/js/list-task/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar color="light" >\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <h3>Welcome my app-mobile</h3> \n<ion-grid>\n  <ion-row> \n    <ion-col col-3 ></ion-col>\n    <ion-col col-6 ><img src="../../assets/imgs/logo.png" alt="logo de la empresa"></ion-col>\n    <ion-col col-3></ion-col>\n  </ion-row>\n  <ion-row>\n    <ion-col col-12>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel mi ut\n    velit tempor aliquam eget eget enim. Proin cursus eleifend pretium. Aliquam cursus \n    pellentesque interdum. Vivamus placerat id leo a pellentesque. Vivamus a congue urna,\n    sed porta eros. Etiam finibus magna et est aliquam, sed semper libero facilisis. \n    Donec lectus lorem, rhoncus vitae quam eget, vulputate gravida elit. Praesent ultricies\n    eros id velit condimentum, eu ultrices nisl consequat."</ion-col>\n  </ion-row>\n  <ion-row>\n    <ion-col col-6>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel mi ut\n    velit tempor aliquam eget eget enim. Proin cursus eleifend pretium. Aliquam cursus \n    pellentesque interdum. Vivamus placerat id leo a pellentesque. Vivamus a congue urna,\n    sed porta eros. Etiam finibus magna et est aliquam, sed semper libero facilisis. \n    Donec lectus lorem, rhoncus vitae quam eget, vulputate gravida elit. Praesent ultricies\n    eros id velit condimentum, eu ultrices nisl consequat.</ion-col>\n    <ion-col col-6 > "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel mi ut\n    velit tempor aliquam eget eget enim. Proin cursus eleifend pretium. Aliquam cursus \n    pellentesque interdum. Vivamus placerat id leo a pellentesque. Vivamus a congue urna,\n    sed porta eros. Etiam finibus magna et est aliquam, sed semper libero facilisis. \n    Donec lectus lorem, rhoncus vitae quam eget, vulputate gravida elit. Praesent ultricies\n    eros id velit condimentum, eu ultrices nisl consequat."</ion-col>\n  </ion-row>\n</ion-grid>\n    \n\n\n  \n</ion-content>\n'/*ion-inline-end:"/home/developer06/Escritorio/personal/js/list-task/src/pages/home/home.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]])
-    ], HomePage);
-    return HomePage;
-}());
-
-//# sourceMappingURL=home.js.map
 
 /***/ }),
 
@@ -1482,29 +1489,29 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ultimate_ngxerrors__ = __webpack_require__(612);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__environments_environments__ = __webpack_require__(626);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__environments__ = __webpack_require__(626);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_fire__ = __webpack_require__(167);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_fire_database__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_fire_auth__ = __webpack_require__(307);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_fire_auth__ = __webpack_require__(308);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__(627);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_home_home__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_list_list__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_add_boat_add_boat__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_home_home__ = __webpack_require__(181);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_list_list__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_add_boat_add_boat__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_initial_initial__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_task_task__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_provider_provider__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_provider_list_provider_list__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_user_user__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_task_task__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_provider_provider__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_provider_list_provider_list__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_user_user__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_add_task_add_task__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_task_list_task_list__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_user_list_user_list__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_signup_signup__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_native_status_bar__ = __webpack_require__(350);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__ionic_native_splash_screen__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_task_list_task_list__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_user_list_user_list__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_signup_signup__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_native_status_bar__ = __webpack_require__(351);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__ionic_native_splash_screen__ = __webpack_require__(353);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__ionic_native_file_ngx__ = __webpack_require__(635);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__services_boat_service__ = __webpack_require__(123);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_provider_service__ = __webpack_require__(84);
@@ -1573,20 +1580,20 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_fire__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_4__environments_environments__["a" /* environment */]),
+                __WEBPACK_IMPORTED_MODULE_5__angular_fire__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_4__environments__["a" /* environment */]),
                 __WEBPACK_IMPORTED_MODULE_6__angular_fire_database__["b" /* AngularFireDatabaseModule */],
                 __WEBPACK_IMPORTED_MODULE_7__angular_fire_auth__["AngularFireAuthModule"],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/add-task/add-task.module#AddTaskPageModule', name: 'AddTaskPage', segment: 'add-task', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/initial/initial.module#InitialPageModule', name: 'InitialPage', segment: 'initial', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-boat/add-boat.module#AddBoatPageModule', name: 'AddBoatPage', segment: 'add-boat', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/initial/initial.module#InitialPageModule', name: 'InitialPage', segment: 'initial', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/provider-list/provider-list.module#ProviderListPageModule', name: 'ProviderListPage', segment: 'provider-list', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/provider/provider.module#ProviderPageModule', name: 'ProviderPage', segment: 'provider', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/task/task.module#TaskPageModule', name: 'TaskPage', segment: 'task', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/user-list/user-list.module#UserListPageModule', name: 'UserListPage', segment: 'user-list', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/user/user.module#UserPageModule', name: 'UserPage', segment: 'user', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/add-task/add-task.module#AddTaskPageModule', name: 'AddTaskPage', segment: 'add-task', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/task-list/task-list.module#TaskListPageModule', name: 'TaskListPage', segment: 'task-list', priority: 'low', defaultHistory: [] }
                     ]
                 }),
@@ -1628,15 +1635,15 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 52:
+/***/ 61:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_boat_add_boat__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__task_task__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_boat_add_boat__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__task_task__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_boat_service__ = __webpack_require__(123);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1779,7 +1786,7 @@ var ListPage = /** @class */ (function () {
     var ListPage_1;
     ListPage = ListPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-list',template:/*ion-inline-start:"/home/developer06/Escritorio/personal/js/list-task/src/pages/list/list.html"*/'<ion-header>\n  <ion-navbar color="light" >\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>List</ion-title>\n    \n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n\n  <ion-list>\n    <!-- <button ion-item *ngFor="let item of items" (click)="presentActionSheet()">\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-end>\n        {{item.note}}\n      </div>\n    </button> -->\n    <button ion-item *ngFor="let boat of boatList" (click)="itemSelected(boat)" (click)="presentActionSheet()">\n        <ion-icon name=\'boat\' item-start></ion-icon>\n        {{boat.Name}}\n        <div class="item-note" item-end>\n          \n        </div>\n      </button>\n\n  </ion-list>\n\n  \n\n  \n\n</ion-content>\n<ion-footer>\n    \n        \n      \n      <ion-toolbar>\n          \n          <button ion-button round outline color="dark" icon-end (click)="addPage()" ><ion-icon name="add"></ion-icon></button>\n        </ion-toolbar>\n</ion-footer>'/*ion-inline-end:"/home/developer06/Escritorio/personal/js/list-task/src/pages/list/list.html"*/
+            selector: 'page-list',template:/*ion-inline-start:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/list/list.html"*/'<ion-header>\n  <ion-navbar color="light" >\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>List</ion-title>\n    \n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n\n  <ion-list>\n    <!-- <button ion-item *ngFor="let item of items" (click)="presentActionSheet()">\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-end>\n        {{item.note}}\n      </div>\n    </button> -->\n    <button ion-item *ngFor="let boat of boatList" (click)="itemSelected(boat)" (click)="presentActionSheet()">\n        <ion-icon name=\'boat\' item-start></ion-icon>\n        {{boat.Name}}\n        <div class="item-note" item-end>\n          \n        </div>\n      </button>\n\n  </ion-list>\n\n  \n\n  \n\n</ion-content>\n<ion-footer>\n    \n        \n      \n      <ion-toolbar>\n          \n          <button ion-button round outline color="dark" icon-end (click)="addPage()" ><ion-icon name="add"></ion-icon></button>\n        </ion-toolbar>\n</ion-footer>'/*ion-inline-end:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/pages/list/list.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */],
@@ -1819,14 +1826,14 @@ var environment = {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(350);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(352);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(351);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(181);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_initial_initial__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_provider_list_provider_list__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_task_list_task_list__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_user_list_user_list__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_provider_list_provider_list__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_task_list_task_list__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_user_list_user_list__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_auth_service__ = __webpack_require__(117);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1882,15 +1889,14 @@ var MyApp = /** @class */ (function () {
     MyApp.prototype.signOut = function () {
         this.auth.signOut();
     };
-    var _a, _b, _c, _d, _e;
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */]),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */]) === "function" && _a || Object)
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/developer06/Escritorio/personal/js/list-task/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar color="light" >\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content  >\n     \n    <ion-list color="dark" >\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n      <button ion-item (click)="signOut()" > Close</button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/home/developer06/Escritorio/personal/js/list-task/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar color="light" >\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content  >\n     \n    <ion-list color="dark" >\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n      <button ion-item (click)="signOut()" > Close</button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/home/developer06/Escritorio/Datos/personal/js/list-task/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_10__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_10__services_auth_service__["a" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _e || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_10__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
     return MyApp;
 }());

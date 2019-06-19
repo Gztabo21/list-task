@@ -8,7 +8,7 @@ import { NgxErrorsModule } from '@ultimate/ngxerrors';
 // import { AngularFireDatabaseModule } from 'angularfire2/database';
 // // for AngularFireAuth
 // import { AngularFireAuthModule } from 'angularfire2/auth';
-import { environment } from '../environments/environments';
+import { environment } from '../environments';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';

@@ -27990,21 +27990,18 @@ page-add-boat #letter {
   color: #124578;
 }
 
-page-initial {
-  background: blue;
-}
-
 page-initial .span-error-login {
   color: red;
   font-size: 15px;
 }
 
-page-initial my-component {
-  background: #55acee;
-}
-
-ion-content {
-  --ion-background-color:#111D12;
+.getstart {
+  background: #00B4DB;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left bottom, left top, from(#0083B0), to(#00B4DB));
+  background: linear-gradient(to top, #0083B0, #00B4DB);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .action-sheets-basic-page .ion-md-share {

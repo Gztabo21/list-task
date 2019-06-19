@@ -6,15 +6,17 @@
 -->
 
 
-<ion-content   padding>
+<ion-content  class="getstart" padding>
 <h1>Welcome</h1>
-<ion-col align-self-center >
-    <ion-icon name="contact" class='avatar' ></ion-icon>
-</ion-col>
+<ion-row> 
+  <ion-col col-3 ></ion-col>
+  <ion-col col-6 ><img src="../../assets/imgs/logo.png" alt="logo de la empresa"></ion-col>
+  <ion-col col-3></ion-col>
+</ion-row>
 <form (ngSubmit)="login()" [formGroup]="loginForm">
     <br>
-    <ion-item [ngClass]="{ invalid: emailErrors.hasError('*', ['touched', 'dirty']) }" >
-        <ion-label  stacked>Email:</ion-label>
+    <ion-item  [ngClass]="{ invalid: emailErrors.hasError('*', ['touched', 'dirty']) }" >
+        <ion-label color="primary" stacked>Email:</ion-label>
         <ion-input type="email" formControlName="email"   placeholder="Email Input"></ion-input>
       </ion-item>
 
@@ -23,7 +25,7 @@
       </div>
       
     <br>
-      <ion-item [ngClass]="{ invalid: passwordErrors.hasError('*', ['touched']) }" >
+      <ion-item  [ngClass]="{ invalid: passwordErrors.hasError('*', ['touched']) }" >
         <ion-label color="primary" stacked>Password:</ion-label>
         <ion-input type="password" formControlName="password"  placeholder="Password Input"></ion-input>
       </ion-item>
@@ -37,12 +39,12 @@
         <div class="form-error">{{loginError}}</div>
   
         <button ion-button full type="submit" [disabled]="!loginForm.valid">Log in</button>
-        <div class="login-footer">
+        <!-- <div class="login-footer">
           <p>
             <a href="#">Forgot password?</a>
             If you're a new user, please sign up.
           </p>
-        </div>
+        </div> -->
   
         <ion-list>
   
@@ -51,10 +53,10 @@
             Log in with Google
           </button> -->
   
-          <button ion-button icon-left block clear (click)="signup()">
+          <!-- <button ion-button icon-left block clear (click)="signup()">
             <ion-icon name="person-add"></ion-icon>
             Sign up
-          </button>
+          </button> -->
         </ion-list>
       </div>
 
